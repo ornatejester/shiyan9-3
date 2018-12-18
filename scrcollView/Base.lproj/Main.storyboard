@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="scrcollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfG-0p-Jvr">
+                                <rect key="frame" x="16" y="47" width="343" height="572"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bqk-RO-H3c"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="gw0-kv-tSZ">
+                                <rect key="frame" x="152" y="620" width="71" height="37"/>
+                                <color key="pageIndicatorTintColor" red="1" green="0.62154506180000002" blue="0.93067554279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.69145283109636269" green="0.67560042222658434" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pageControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="fY0-U9-mXg"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gw0-kv-tSZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="62e-d6-BIG"/>
+                            <constraint firstItem="gw0-kv-tSZ" firstAttribute="top" secondItem="tfG-0p-Jvr" secondAttribute="bottom" constant="1" id="FxV-pU-NBq"/>
+                            <constraint firstItem="tfG-0p-Jvr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L6V-aQ-yXd"/>
+                            <constraint firstItem="tfG-0p-Jvr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xuu-jL-hNX"/>
+                            <constraint firstItem="tfG-0p-Jvr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="kPs-MR-JCs"/>
+                            <constraint firstItem="tfG-0p-Jvr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lA9-DH-BEB"/>
+                            <constraint firstItem="tfG-0p-Jvr" firstAttribute="centerX" secondItem="gw0-kv-tSZ" secondAttribute="centerX" id="rZP-IA-AKE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gw0-kv-tSZ" secondAttribute="trailing" constant="152" id="shX-BP-8P7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gw0-kv-tSZ" secondAttribute="bottom" constant="10" id="zlO-FO-L7h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pagControll" destination="gw0-kv-tSZ" id="hrt-eq-9Hd"/>
+                        <outlet property="scrollView" destination="tfG-0p-Jvr" id="63S-LH-69N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280.80000000000001" y="-24.7376311844078"/>
+        </scene>
+    </scenes>
+</document>
